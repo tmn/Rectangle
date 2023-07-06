@@ -13,7 +13,8 @@ class MASShortcutMigration {
     
     static func migrate() {
         
-        guard let dataTransformer = ValueTransformer(forName: NSValueTransformerName.keyedUnarchiveFromDataTransformerName) else { return }
+        guard let dataTransformer = ValueTransformer(forName:
+            NSValueTransformerName.secureUnarchiveFromDataTransformerName) else { return }
         
         guard let dictTransformer = ValueTransformer(forName: NSValueTransformerName(rawValue: MASDictionaryTransformerName)) else { return }
 
